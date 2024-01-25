@@ -1,15 +1,34 @@
-import {BrowserRouter as Router } from "react-router-dom";
-import AppRoutes from "./routes/AppRoutes";
-import Navbar from "./components/layout/Navbar/Navbar";
+import Experience from "./components/three.js/Experience";
+
+const models= [
+    
+  {
+    nombre3D: "PizzaRuculaAlpha.glb",
+    archivo: "PizzaRuculaAlpha.glb",
+    precarga: "/PizzaRuculaAlpha.glb",
+    geometria: "PizzaRucula",
+    material: "pizza",
+  },
+  {
+    nombre3D: "PizzaRuculaAlpha.glb",
+    archivo: "PizzaRuculaAlpha.glb",
+    precarga: "/PizzaRuculaAlpha.glb",
+    geometria: "PizzaRucula",
+    material: "pizza",
+  },
+ 
+
+]
 
 const App = () => {
 
   return (
     <main className="main">
-      <Router>
-          <Navbar />
-          <AppRoutes/>
-      </Router>
+
+      <Experience models={models}/> 
+      
+      
+    
     </main>
     
   )

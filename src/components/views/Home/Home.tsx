@@ -9,6 +9,8 @@ import 'swiper/css/navigation';
 
 import style from './Home.module.css'
 import ProductCard from '../../features/ProductCard/ProductCard';
+/* import ProductTest from '../../features/ProductCard/ProductTest'; */
+
 import { ProductService } from '../../../services/ProductService';
 import { Product } from '../../../types/Product';
 import { ICategoryContext } from '../../../types/Providers';
@@ -35,12 +37,19 @@ const Home = () => {
           <h2>{selectedCategory.beautifulName}</h2>
         </div>
         <Swiper loop={true} navigation={true} modules={[Navigation]} className={style.swipper}>
-          {
+         {
             products.map((product, index)=>(
               <SwiperSlide key={index}><ProductCard product={product}/></SwiperSlide>
             ))
           }
         </Swiper>
+      {/*   {
+            products.map((product, index)=>(
+              <div key={index}><ProductCard product={product}/></div>
+            ))
+          } */}
+        
+      {/*   <ProductTest/> */}
       </section>
   )
 }
